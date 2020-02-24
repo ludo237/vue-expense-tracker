@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-flow-row grid-rows-1 grid-cols-2 gap-3 mb-5">
+  <div class="grid grid-flow-row grid-rows-2 sm:grid-rows-1 grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
     <IncomeStatistic />
     <ExpenseStatistic />
   </div>

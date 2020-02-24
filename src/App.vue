@@ -1,5 +1,5 @@
 <template>
-  <div class="w-1/3">
+  <div class="w-full px-2 lg:w-1/3 lg:mx-auto lg:px-0">
     <Header />
     <Statistics />
     <TransactionsList />
