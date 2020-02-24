@@ -1,5 +1,5 @@
 <template>
-  <div class="font-semibold flex items-center justify-center">
+  <div class="font-semibold flex items-center">
     <span class="mr-1" v-text="amount" />
     <Icon icon="euro-sign" size="xs" />
   </div>

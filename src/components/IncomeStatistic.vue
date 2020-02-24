@@ -1,7 +1,7 @@
 <template>
   <div class="shadow-sm bg-white p-3 rounded text-center">
     <h2 class="font-semibold uppercase">Income</h2>
-    <Currency :amount="income" class="text-2xl text-green-600" />
+    <Currency :amount="income" class="text-2xl justify-center text-green-600" />
   </div>
 </template>
 
