@@ -1,3 +1,3 @@
-# Exprense Tracker
+# Expense Tracker
 
 Simple VueJs application to manager your expenses
