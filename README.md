@@ -1,3 +1,3 @@
-# Expense Tracker
+# Exprense Tracker
 
-Simple project for expense tracking built with Vue, Vuex and TailwindCSS
+Simple VueJs application to manager your expenses
