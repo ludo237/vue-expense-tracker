@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="grid grid-flow-row grid-rows-1 grid-cols-2 gap-3 mb-5">
     <IncomeStatistic />
     <ExpenseStatistic />
   </div>

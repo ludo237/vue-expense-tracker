@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-1/3">
     <Header />
     <Statistics />
     <TransactionsList />
@@ -17,7 +17,3 @@ export default {
   components: { Header, Statistics, TransactionsList }
 };
 </script>
-
-<style lang="sass">
-  @import "./assets/app.scss";
-</style>

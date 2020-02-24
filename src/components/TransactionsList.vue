@@ -1,7 +1,9 @@
 <template>
-  <ul>
+  <div>
+    <h2 class="font-semibold text-2xl border-b mb-4">History</h2>
+
     <TransactionListItem v-for="(transaction, index) in transactions" :key="index" :transaction="transaction" />
-  </ul>
+  </div>
 </template>
 
 <script>
