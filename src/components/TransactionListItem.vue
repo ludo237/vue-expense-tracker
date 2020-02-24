@@ -1,6 +1,6 @@
 <template>
   <div class="shadow-sm bg-white p-3 rounded mb-3 flex border-r-8" :class="borderColor">
-    <div class="flex-grow">{{ transaction.name }}</div>
+    <div class="flex-grow">{{ transaction.description }}</div>
     <Currency :amount="transaction.amount" />
   </div>
 </template>
