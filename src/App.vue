@@ -7,3 +7,7 @@ export default {
   name: "App",
 };
 </script>
+
+<style lang="sass">
+  @import "./assets/app.scss";
+</style>
