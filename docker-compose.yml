@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  mongo:
+    image: mongo:bionic
+    container_name: vet_mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: vetmongo
+      MONGO_INITDB_ROOT_PASSWORD: vetmongo
+
+networks: 
+    default:
+        name: vetmongo_default
+        driver: bridge
