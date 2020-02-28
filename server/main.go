@@ -14,7 +14,6 @@ func HomeHandler(writer http.ResponseWriter, request *http.Request) {
 	writer.Header().Set("Content-Type", "application/json")
 	writer.WriteHeader(http.StatusOK)
 
-	// Trasformare questo
 	r := responses.CollectionResponse{}
 
 	jsonEncoder := json.NewEncoder(writer)
