@@ -12,7 +12,30 @@ export const fetch = ({ commit }) => {
             },
             )
             .catch(({ response }) => reject(response))
-    })
+    });
 }
-export const addTransaction = ({ commit }, transaction) => commit(mutations.ADD_TRANSACTION, transaction);
-export const removeTransaction = ({ commit }, transactionId) => commit(mutations.REMOVE_TRANSACTION, transactionId);
+export const addTransaction = ({ commit }, transaction) => {
+    const { description, amount } = transaction;
+    return new Promise((resolve, reject) => {
+        Repository
+            .transactions
+            .store(description, amount)
+            .then(({ data: { data } }) => {
+                commit(mutations.ADD_TRANSACTION, data);
+                resolve(data);
+            })
+            .catch(({ response }) => reject(response))
+    });
+};
+export const removeTransaction = ({ commit }, transactionId) => {
+    return new Promise((resolve, reject) => {
+        Repository
+            .transactions
+            .delete(transactionId)
+            .then((data) => {
+                commit(mutations.REMOVE_TRANSACTION, transactionId);
+                resolve(data);
+            })
+            .catch(({ response }) => reject(response))
+    });
+};
