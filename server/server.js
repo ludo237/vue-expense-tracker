@@ -22,6 +22,9 @@ connectDB();
 
 const server = express();
 
+// This allow us to get the body parsed in json
+server.use(express.json());
+
 server.use('/api/v1/', require('./routes'));
 
 server.listen(process.env.PORT, console.log(`Server up on port ${process.env.PORT}`));
