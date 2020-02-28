@@ -1,4 +1,4 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faEuroSign, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { faCircleNotch, faEuroSign, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faEuroSign, faTrashAlt);
+library.add(faCircleNotch, faEuroSign, faTrashAlt);

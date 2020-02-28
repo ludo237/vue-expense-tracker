@@ -2,10 +2,10 @@
   <div>
     <h2 class="font-semibold text-2xl border-b mb-4">History</h2>
 
-    <template v-if="isLoading">Loading transactions...</template>
+    <loader v-if="isLoading" />
 
     <template v-else>
-      <div v-if="transactions.length === 0">No transactions</div>
+      <EmptyTransactionList v-if="transactions.length === 0" />
       <TransactionListItem v-for="(transaction, index) in transactions" :key="index" :transaction="transaction" v-else />
     </template>
   </div>
@@ -13,12 +13,16 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
-import TransactionListItem from './TransactionListItem';
+import Loader from './Loader';
 
 export default {
   name: 'TransactionsList',
 
-  components: { TransactionListItem },
+  components: {
+    Loader,
+    EmptyTransactionList: () => import('./EmptyTransactionList'),
+    TransactionListItem: () => import('./TransactionListItem')
+  },
 
   data: () => ({
     isLoading: true,
