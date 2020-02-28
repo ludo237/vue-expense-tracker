@@ -2,6 +2,10 @@ import * as mutations from './mutation-types';
 import UUIDv4 from 'uuid/v4';
 
 export default {
+    [mutations.ADD_TRANSACTIONS]: (state, transactions) => {
+        state.transactions = transactions;
+    },
+
     [mutations.ADD_TRANSACTION]: (state, { description, amount }) => {
         const newTransaction = {
             id: UUIDv4(),
