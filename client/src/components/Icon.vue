@@ -1,5 +1,5 @@
 <template>
-  <font-awesome-icon :icon="icon" :size="size" />
+  <font-awesome-icon :icon="icon" :size="size" :spin="spin" />
 </template>
 
 <script>
@@ -18,6 +18,10 @@ export default {
       type: String,
       default: null,
     },
+    spin: {
+      required: false,
+      type: Boolean,
+    }
   },
 
   components: {
