@@ -1,15 +1,16 @@
 version: '3.7'
 
 services:
-  client:
-    image: node:alpine
-    container_name: vet_client
-    expose: [8080]
-  
   server:
     image: node:alpine
     container_name: vet_server
     expose: [2370]
+    ports: 
+      - 2370:2370
+    working_dir: /home/node/app
+    volumes: 
+      - ./server:/home/node/app
+    command: "npm run server"
 
   mongo:
     image: mongo:bionic
