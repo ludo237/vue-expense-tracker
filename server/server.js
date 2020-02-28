@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
@@ -22,6 +23,8 @@ connectDB();
 
 const server = express();
 
+// Global cors enable
+server.use(cors());
 // This allow us to get the body parsed in json
 server.use(express.json());
 
